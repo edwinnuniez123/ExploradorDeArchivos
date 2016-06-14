@@ -204,7 +204,9 @@ public class Explorador extends javax.swing.JFrame {
 
     private void exploradorMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exploradorMouseReleased
         // TODO add your handling code here:
-        jPopupMenu3.show(this, evt.getX(), evt.getY());
+        if(SwingUtilities.isRightMouseButton(evt)){
+            jPopupMenu3.show(this, evt.getX(), evt.getY());
+        }
     }//GEN-LAST:event_exploradorMouseReleased
 
     private void jMenuItem1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jMenuItem1AncestorAdded
